@@ -22,21 +22,56 @@
 }
 
 .main{
-  padding: 5%;
+  background-image: url('../assets/noun_bubbles_66854.svg');
+  background-size: 150px;
+  background-color: @color-primary-4;
   .width-100();
   .main-one{
+    width: 85%;
+    margin: 0 auto 30px auto;
+    padding: 10%;
     height: 33%;
+    background-color: @color-complement-2;
+    .first-line{
+      color: @color-primary-4;
+      font-size: 2rem;
+    }
+    .second-line {
+      color: @color-primary-3;
+    }
+    .third-line {
+      color: white;
+      font-size: 4rem;
+      font-weight: bolder;
+    }
 //    border: 1px solid red;
     .flex(left, @dir: column);
   }
   .main-two{
+    background-color: @color-primary-2;
+    width: 100%;
+    padding-bottom: 5%;
+    .flex(center, @dir: column);
+//    border: 1px solid red;
+    height: 50vh;
+    .main-two-content {
+      margin: 10px;
+    }
+  }
+  .main-three {
+    background-color: @color-complement-1;
+    background-image: url('../assets/noun_bubbles_66854.svg');
+    background-size: 15px;
+    width: 70%;
+    margin: 15%;
     .flex(center, @dir: column);
 //    border: 1px solid red;
     height: 33%;
-  }
-  .main-three {
-    .flex(flex-end, @dir: column);
-//    border: 1px solid red;
-    height: 33%;
+    video {
+      .flex(center);
+      
+      width: 100%;
+      padding: 10%;
+    }
   }
 }

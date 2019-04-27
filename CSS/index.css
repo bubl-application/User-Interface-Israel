@@ -25,6 +25,9 @@
 .cta-hover {
   background-color: #821417;
 }
+.bubble-icon {
+  fill: #156A10;
+}
 @font-face {
   font-family: 'Crafty Girls';
   font-style: normal;
@@ -106,29 +109,66 @@
   color: #CF6A6D;
 }
 .main {
-  padding: 5%;
+  background-image: url('../assets/noun_bubbles_66854.svg');
+  background-size: 150px;
+  background-color: #044A00;
   width: 100%;
 }
 .main .main-one {
+  width: 85%;
+  margin: 0 auto 30px auto;
+  padding: 10%;
   height: 33%;
+  background-color: #CF6A6D;
   display: flex;
   justify-content: left;
   align-items: none;
   flex-direction: column;
 }
+.main .main-one .first-line {
+  color: #044A00;
+  font-size: 2rem;
+}
+.main .main-one .second-line {
+  color: #156A10;
+}
+.main .main-one .third-line {
+  color: white;
+  font-size: 4rem;
+  font-weight: bolder;
+}
 .main .main-two {
+  background-color: #5BAA57;
+  width: 100%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: column;
+  height: 50vh;
+}
+.main .main-two .main-two-content {
+  margin: 10px;
+}
+.main .main-three {
+  background-color: #F6AAAC;
+  background-image: url('../assets/noun_bubbles_66854.svg');
+  background-size: 15px;
+  width: 70%;
+  margin: 15%;
   display: flex;
   justify-content: center;
   align-items: none;
   flex-direction: column;
   height: 33%;
 }
-.main .main-three {
+.main .main-three video {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: none;
-  flex-direction: column;
-  height: 33%;
+  flex-direction: row;
+  width: 100%;
+  padding: 10%;
 }
 * {
   box-sizing: border-box;
