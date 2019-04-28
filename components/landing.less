@@ -4,7 +4,6 @@
   background-image: url('../assets/bubble-header.jpg');
   background-size: cover;
   background-position: 50% 0;
-  z-index: -1;
 
 
   .header-text {
@@ -25,6 +24,7 @@
   background-image: url('../assets/noun_bubbles_66854.svg');
   background-size: 150px;
   background-color: @color-primary-4;
+  margin-top: 30px;
   .width-100();
   .main-one{
     width: 85%;
@@ -49,13 +49,33 @@
   }
   .main-two{
     background-color: @color-primary-2;
+    background: repeating-radial-gradient(
+      circle,
+      @color-primary-2,
+      @color-primary-2 34px,
+      @color-complement-4 40px,
+      @color-primary-4 80px
+    );
     width: 100%;
     padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: @color-complement-2;
     .flex(center, @dir: column);
 //    border: 1px solid red;
     height: 50vh;
     .main-two-content {
       margin: 10px;
+      h3 {
+        background-color: @color-primary-4;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 4rem;
+      }
+      .main-two-text {
+        color: white;
+        background-color: @rgba-primary-4;
+      }
     }
   }
   .main-three {
@@ -64,9 +84,17 @@
     background-size: 15px;
     width: 70%;
     margin: 15%;
+    margin-bottom: 0;
     .flex(center, @dir: column);
 //    border: 1px solid red;
     height: 33%;
+    .main-three-headline {
+      color: @color-primary-4;
+      font-size: 3rem;
+      padding: 5%;
+      background-color: @color-complement-1;
+      font-weight: bold;
+    }
     video {
       .flex(center);
       
