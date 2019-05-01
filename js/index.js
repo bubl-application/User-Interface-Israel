@@ -8,11 +8,17 @@ logo.addEventListener('mouseenter',x=>{
   })
 })*/
 
-let cta = document.querySelector(".cta");
-cta.addEventListener('mouseenter',x => {
-  cta.classList.add("cta-hover");
-})
-cta.addEventListener('mouseleave',x => {
-  cta.classList.remove("cta-hover");
-})
-/*document.querySelector(".cta").addEventListener('click',x=>console.log("hovered"));*/
+let ctas = document.querySelectorAll(".cta");
+ctas.forEach(x=>{
+  x.addEventListener('mouseenter', y => {
+    x.classList.add("cta-hover");
+    x.style.cursor="pointer";
+  })
+  x.addEventListener('mouseleave', y => {
+    x.classList.remove("cta-hover");
+  })
+  x.addEventListener('click', y => {
+    location.href="https://bubl-app.netlify.com/schools";
+  })
+});
+  /*document.querySelector(".cta").addEventListener('click',x=>console.log("hovered"));*/
