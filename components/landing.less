@@ -27,9 +27,18 @@
   margin-top: 30px;
   .width-100();
   .main-one{
+    .main-one-cta{
+      .cta();
+      width: 40vh;;
+      border: 2px solid @color-primary-2;
+      @media (max-width: 500px){
+        width: 20vh;
+        align-self: center;
+      }
+    }
     width: 85%;
     margin: 0 auto 30px auto;
-    padding: 10%;
+    padding: 0 10% 5% 10%;
     height: 33%;
     background-color: @color-complement-2;
     .first-line{
@@ -57,24 +66,49 @@
       @color-primary-4 80px
     );
     width: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     padding-left: 2%;
     padding-right: 2%;
+    
     color: @color-complement-2;
     .flex(center, @dir: column);
 //    border: 1px solid red;
-    height: 50vh;
+    height: 30vh;
     .main-two-content {
       margin: 10px;
-      h3 {
+      display: flex;
+      flex-wrap:nowrap;
+      height: 30vh;
+      .main-two-headline {
         background-color: @color-primary-4;
         border-radius: 5px;
         text-align: center;
-        font-size: 4rem;
+        font-size: 2rem;
+        width: 50%;
+        height: 100%;
+        vertical-align: middle;
       }
       .main-two-text {
-        color: white;
+        padding: 2%;
+        text-align: center;
+        vertical-align: middle;
         background-color: @rgba-primary-4;
+        width: 50%;
+        background-color: @color-complement-1;
+        background-image: url('../assets/noun_bubbles_66854.svg');
+        background-size: 15px;
+        font-size: 1.5rem;
+           -webkit-text-stroke: 1px @color-primary-4;
+        color: @color-primary-1;
+        text-shadow:
+         3px 3px 0 #000,
+         -1px -1px 0 #000,  
+         1px -1px 0 #000,
+         -1px 1px 0 #000,
+         1px 1px 0 #000;
+        @media (max-width: 500px){
+          font-size: 1rem;
+        }
       }
     }
   }
