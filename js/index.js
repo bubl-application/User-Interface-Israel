@@ -1,4 +1,4 @@
-/*let logo = document.querySelector(".logo");
+let logo = document.querySelector(".logo");
 let about = document.querySelector('.about');
 
 logo.addEventListener('mouseenter',x=>{
@@ -6,7 +6,7 @@ logo.addEventListener('mouseenter',x=>{
   logo.addEventListener('mouseleave',x=>{
     setTimeout(x=>about.style.display="none",3000)
   })
-})*/
+})
 
 let ctas = document.querySelectorAll(".cta");
 ctas.forEach(x=>{
@@ -21,4 +21,32 @@ ctas.forEach(x=>{
     location.href="https://bubl-app.netlify.com/schools";
   })
 });
-  /*document.querySelector(".cta").addEventListener('click',x=>console.log("hovered"));*/
+
+let teamData = [
+  {name: 'Izzy', role: 'UI Dev'},
+  {name: 'Kathy', role: 'UI Dev'},
+  {name: 'Julian', role: 'UI Dev'},
+  {name: 'Edgar', role: 'Frontend'},
+  {name: 'Adam', role: 'Frontend'},
+  {name: 'Andrew', role: 'Backend'},
+  {name: 'Carlos', role: 'Project Manager'}
+  ]
+
+let teamElements = teamData.map((el,idx)=>{
+  let memberName = document.createElement('div');
+  let memberPic = document.createElement('img')
+  memberPic.src="./assets/profile-pics/"+el.name+".png";
+  // <div></div>
+  memberName.innerText=el.name;
+  //<div>Izzy</div>
+  memberName.classList.add("member");
+  memberName.classList.add("member-"+el.name);
+  //<div class="member member-Izzy">Izzy</div>
+  document.querySelector('.about-main').append(memberName);
+  memberName.append(memberPic);
+  return memberName;
+  
+})
+
+
+
