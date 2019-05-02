@@ -35,7 +35,9 @@ let teamData = [
 let teamElements = teamData.map((el,idx)=>{
   let memberName = document.createElement('div');
   let memberPic = document.createElement('img')
+  let memberRole = document.createElement('div');
   memberPic.src="./assets/profile-pics/"+el.name+".png";
+  memberRole.innerText=el.role;
   // <div></div>
   memberName.innerText=el.name;
   //<div>Izzy</div>
@@ -44,6 +46,7 @@ let teamElements = teamData.map((el,idx)=>{
   //<div class="member member-Izzy">Izzy</div>
   document.querySelector('.about-main').append(memberName);
   memberName.append(memberPic);
+  memberName.append(memberRole);
   return memberName;
   
 })
