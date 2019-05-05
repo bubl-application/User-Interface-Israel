@@ -1,5 +1,13 @@
-let logo = document.querySelector(".logo");
+let logo = document.querySelector('.logo');
 let about = document.querySelector('.about');
+let login = document.querySelector('.login');
+login.addEventListener('click', y => {
+  location.href="https://bubl-app.netlify.com/login";
+});
+  login.addEventListener('mouseenter', y => {
+    login.style.cursor="pointer";
+    
+  })
 
 logo.addEventListener('mouseenter',x=>{
   about.style.display="inline";
@@ -18,7 +26,7 @@ ctas.forEach(x=>{
     x.classList.remove("cta-hover");
   })
   x.addEventListener('click', y => {
-    location.href="https://bubl-app.netlify.com/schools";
+    location.href="https://bubl-app.netlify.com/register";
   })
 });
 
