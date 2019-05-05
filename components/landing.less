@@ -25,6 +25,7 @@
   background-size: 150px;
   background-color: @color-primary-4;
   margin-top: 30px;
+  .flex(@jc: center, @ai: none, @dir: column);
   .width-100();
   .main-one{
     .main-one-cta{
@@ -65,38 +66,38 @@
       @color-complement-4 40px,
       @color-primary-4 80px
     );
-    width: 100%;
+    //width: 40vh;
     padding-bottom: 2%;
     padding-left: 2%;
     padding-right: 2%;
     
     color: @color-complement-2;
-    .flex(center, @dir: column);
+    .flex(@jc: space-around, @ai: center, @dir: column);
 //    border: 1px solid red;
-    height: 30vh;
+    height: auto;
     .main-two-content {
+      .flex(@jc: space-around, @ai: center, @dir: column);
+      width: 80%;
       margin: 10px;
-      display: flex;
-      flex-wrap:nowrap;
-      height: 30vh;
+      height: auto;
       .main-two-headline {
         background-color: @color-primary-4;
         border-radius: 5px;
         text-align: center;
         font-size: 2rem;
-        width: 50%;
-        height: 100%;
+        width: 100%;
+        height: auto;
         vertical-align: middle;
       }
       .main-two-text {
         padding: 2%;
+        height: auto;
         text-align: center;
         vertical-align: middle;
-        background-color: @rgba-primary-4;
-        width: 50%;
-        background-color: @color-complement-1;
+        width: auto;
+        background-color: @color-complement-4;
         background-image: url('../assets/noun_bubbles_66854.svg');
-        background-size: 15px;
+        background-size: 500px;
         font-size: 1.5rem;
            -webkit-text-stroke: 1px @color-primary-4;
         color: @color-primary-1;

@@ -1,8 +1,23 @@
 .about-container {
   top: 50px;
   position: relative;
+  background-attachment: fixed;
+  height: auto;
+  background: repeating-linear-gradient(
+    45deg,
+    @color-primary-1,
+    @color-primary-1 10px,
+    @color-complement-1 10px,
+    @color-complement-1 20px
+  );
+  @media (max-width: 800px) {
+    height: auto;
+  }
+  
   .about-header {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: @color-primary-3;
   }
   .about-main {
     padding-left: 15%;
@@ -13,13 +28,32 @@
     align-content: stretch;
     flex-wrap: wrap;
     align-items: center;
+    @media (max-width: 800px){
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+      //height: 100%;
+    }
     .member{
+      background-color: @color-complement-1;
+      padding: 1%;
       margin: 25px;
       width: 25%;
       box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      font-weight: bold;
+      @media (max-width: 800px){
+        width: 75%;
+      }
+      .member-name {
+        font-size: 2rem;
+      }
       img {
-        border-radius: 10px;
-        width: 50px;
+        border-radius: 20%;
+        width: 100%;
+        height: auto;
+      }
+      .member-bio {
+        text-align: center;
       }
     }
   }

@@ -1,5 +1,13 @@
-let logo = document.querySelector(".logo");
+let logo = document.querySelector('.logo');
 let about = document.querySelector('.about');
+let login = document.querySelector('.login');
+login.addEventListener('click', y => {
+  location.href="https://bubl-app.netlify.com/login";
+});
+  login.addEventListener('mouseenter', y => {
+    login.style.cursor="pointer";
+    
+  })
 
 logo.addEventListener('mouseenter',x=>{
   about.style.display="inline";
@@ -18,7 +26,7 @@ ctas.forEach(x=>{
     x.classList.remove("cta-hover");
   })
   x.addEventListener('click', y => {
-    location.href="https://bubl-app.netlify.com/schools";
+    location.href="https://bubl-app.netlify.com/register";
   })
 });
 
@@ -33,18 +41,25 @@ let teamData = [
   ]
 
 let teamElements = teamData.map((el,idx)=>{
-  let memberName = document.createElement('div');
+  let memberCard = document.createElement('div');
   let memberPic = document.createElement('img')
+  let memberRole = document.createElement('div');
+  let memberName = document.createElement('span')
+  memberName.classList.add('member-name');
   memberPic.src="./assets/profile-pics/"+el.name+".png";
+  memberRole.innerText=el.role;
+  memberRole.classList.add("member-bio");
   // <div></div>
   memberName.innerText=el.name;
   //<div>Izzy</div>
-  memberName.classList.add("member");
-  memberName.classList.add("member-"+el.name);
+  memberCard.classList.add("member");
+  memberCard.classList.add("member-"+el.name);
   //<div class="member member-Izzy">Izzy</div>
-  document.querySelector('.about-main').append(memberName);
-  memberName.append(memberPic);
-  return memberName;
+  document.querySelector('.about-main').append(memberCard);
+  memberCard.append(memberName);
+  memberCard.append(memberPic);
+  memberCard.append(memberRole);
+  return memberCard;
   
 })
 
